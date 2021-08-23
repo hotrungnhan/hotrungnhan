@@ -4,7 +4,7 @@
   <img align="left" alt="Nhan's facebook" width="30px" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assest/facebook.gif?raw=true" />
 </a>
 <a href="https://zalo.me/0961130643">
-  <img align="left" alt="Anurag's Zalo" width="30px" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assest/zalo.gif?raw=true" />
+  <img align="left" alt="Anurag's Zalo" width="30px" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assest/zalo.svg?raw=true" />
 </a>
 
 <br />
