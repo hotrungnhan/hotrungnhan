@@ -1,7 +1,7 @@
 ### Hi there I`m [Hồ Trung Nhân!](https://hotrungnhan.tk) 👋
 
 <a href="https://fb.com/kudou.d.sterain">
-  <img align="left" alt="Nhan's facebook" width="30px" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assest/icons8-facebook-circled.gif?raw=true" />
+  <img align="left" alt="Nhan's facebook" width="30px" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assest/facebook.gif?raw=true" />
 </a>
 <a href="https://zalo.me/0961130643">
   <img align="left" alt="Anurag's Zalo" width="30px" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assest/zalo.gif?raw=true" />
