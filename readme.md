@@ -20,8 +20,7 @@ A passionate self-taught backend deverloper in vietnam
 * 🖥 Công Nghệ, Phần cứng máy tính
 * 🍲 Ăn
 ###  Những Ngôn Ngữ và tools:
-<img alt="golang" src="https://raw.githubusercontent.com/hotrungnhan/hotrungnhan/c0d828254e3c3170f72380df4dc8403e0bec446f/assest/golang.svg" width="30"><img alt="android" src="
-https://github.com/hotrungnhan/hotrungnhan/blob/main/assest/android.svg?raw=true" width="30">
+<img alt="golang" src="https://raw.githubusercontent.com/hotrungnhan/hotrungnhan/c0d828254e3c3170f72380df4dc8403e0bec446f/assest/golang.svg" width="30"><img alt="android" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assest/android.svg?raw=true" width="30">
 <img  alt="js" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assest/javascript.gif?raw=true" width="30">
 <img alt="C#" src="https://raw.githubusercontent.com/hotrungnhan/hotrungnhan/c0d828254e3c3170f72380df4dc8403e0bec446f/assest/c%23.svg" width="30">
 <img alt="docker" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assest/docker.svg?raw=true" width="30">
