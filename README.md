@@ -1,4 +1,5 @@
-# hotrungnhan
+![Git CI](https://github.com/hotrungnhan/hotrungnhan/actions/workflows/deploy.yaml/badge.svg)
+# Home page
 
 ## Project setup
 ```
