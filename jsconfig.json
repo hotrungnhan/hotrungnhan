@@ -1,5 +1,10 @@
 {
-    "include": [
-        "./src/**/*"
-    ]
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "components/*": [
+                "src/**/*"
+            ]
+        }
+    }
 }

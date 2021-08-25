@@ -2,3 +2,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .text {
+    @apply dark:text-white text-black;
+  }
+  .background {
+    @apply dark:bg-gray-800 bg-gray-50;
+  }
+}
+
+#app {
+  @apply w-full  min-h-screen;
+  @extend .background;
+}

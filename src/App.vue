@@ -1,26 +1,24 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<template >
+  <HelloWorld />
+  <!-- <input v-model="string" type="text" @keyup.enter="submit" /> -->
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import HelloWorld from "./components/HelloWorld.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    HelloWorld,
+  },
+  setup() {
+    // var string = ref("");
+    // var update = inject("updateLocalize");
+    // function submit() {
+    //   update(string.value);
+    // }
+    // return { submit, string };
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped lang="postcss">
 </style>
