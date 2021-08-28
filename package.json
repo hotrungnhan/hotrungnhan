@@ -15,7 +15,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/vue-fontawesome": "^3.0.0-4",
     "@hotrungnhan/vue-axios": "^1.0.10",
-    "@hotrungnhan/vue-prism-component": "^1.0.1",
+    "@hotrungnhan/vue-prism-component": "^1.0.2",
     "@popperjs/core": "^2.9.3",
     "axios": "^0.21.1",
     "prismjs": "^1.24.1",
