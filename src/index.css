@@ -3,16 +3,44 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .text {
+@layer utilities {
+  .text-darkmode {
     @apply dark:text-white text-black;
   }
-  .background {
-    @apply dark:bg-gray-800 bg-gray-50;
+  .background-darkmode {
+    @apply dark:bg-gray-800 bg-gray-200;
+  }
+  @variants responsive{
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
   }
 }
+html,
+body {
+  @apply overflow-x-hidden overflow-y-auto  h-screen relative background-darkmode;
+}
+/* popper */
+.dark {
+  --popper-theme-background-color: theme('colors.blue.500');
+  --popper-theme-background-color-hover: theme('colors.green.500');
+  --popper-theme-border-width: 0px;
+  --popper-theme-border-style: none;
+  --popper-theme-border-radius: theme('borderRadius.DEFAULT');
+  --popper-theme-padding: theme('padding.4');
+  --popper-theme-box-shadow: theme('boxShadow.DEFAULT');
+}
 
-#app {
-  @apply w-full  min-h-screen;
-  @extend .background;
+.light {
+  --popper-theme-background-color: theme('colors.red.500');
+  --popper-theme-background-color-hover: theme('colors.gray.500');
+  --popper-theme-border-width: 0px;
+  --popper-theme-border-style: none;
+  --popper-theme-border-radius: theme('borderRadius.DEFAULT');
+  --popper-theme-padding: theme('padding.4');
+  --popper-theme-box-shadow: theme('boxShadow.DEFAULT');
 }

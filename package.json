@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build ",
+    "build:report": "vue-cli-service build --report",
     "lint": "vue-cli-service lint",
     "i18n:report": "vue-cli-service i18n:report --src \"./src/**/*.?(js|vue)\" --locales \"./src/locales/**/*.json\""
   },
@@ -13,14 +14,15 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/vue-fontawesome": "^3.0.0-4",
-    "add": "^2.0.6",
+    "@hotrungnhan/vue-axios": "^1.0.10",
+    "@hotrungnhan/vue-prism-component": "^1.0.1",
+    "@popperjs/core": "^2.9.3",
     "axios": "^0.21.1",
-    "core-js": "^3.6.5",
     "prismjs": "^1.24.1",
     "vue": "^3.0.0",
     "vue-axios": "^3.2.5",
     "vue-i18n": "^9.1.7",
-    "@hotrungnhan/vue-prism-component": "^1.0.1"
+    "vue3-popper": "^1.2.1"
   },
   "devDependencies": {
     "@intlify/vue-i18n-loader": "^3.0.0",

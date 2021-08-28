@@ -4,6 +4,10 @@
  * @type {import('@vue/cli-service').ProjectOptions}
  */
 module.exports = {
+  devServer: {
+    hot: true,
+    liveReload: true,
+  },
   pages: {
     index: {
       // entry for the page
@@ -17,19 +21,23 @@ module.exports = {
       title: 'Hồ Trung Nhân',
       // chunks to include on this page, by default includes
       // extracted common chunks and vendor chunks.
-      chunks: ['chunk-vendors', 'chunk-common', 'index']
+      chunks: ['chunk-vendors', 'chunk-common', 'index'],
     },
   },
-  publicPath: '/hotrungnhan/',
+
+  productionSourceMap: false,
+
+  publicPath: '/',
+
   pluginOptions: {
     i18n: {
       locale: 'en',
-      fallbackLocale: 'vi',
+      fallbackLocale: 'en',
       localeDir: 'locales',
       enableLegacy: false,
-      runtimeOnly: false,
-      compositionOnly: false,
-      fullInstall: true
-    }
-  }
+      runtimeOnly: process.env.NODE_ENV === 'production',
+      compositionOnly: true,
+      fullInstall: false,
+    },
+  },
 }

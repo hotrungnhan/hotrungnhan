@@ -4,6 +4,5 @@ module.exports = {
     require('postcss-nested'),
     require("tailwindcss"),
     require("autoprefixer"),
- 
   ],
 }

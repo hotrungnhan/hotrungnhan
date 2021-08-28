@@ -1,3 +1,9 @@
 {
-  "message": "en"
+  "lp-title": "A Passioner Deverloop from vietnamse",
+  "lp-paragraph": "hello i18n !! A Passioner Deverloop from vietnamseA Passioner Deverloop from vietnamseA Passioner Deverloop from vietnamseA Passioner Deverloop from vietnamse",
+  "navigation": {
+    "change-language": "Change Language",
+    "mode-dark": "Dark Mode",
+    "mode-light": "Light Mode"
+  }
 }

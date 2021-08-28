@@ -968,6 +968,20 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
+"@hotrungnhan/vue-axios@^1.0.10":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@hotrungnhan/vue-axios/-/vue-axios-1.0.10.tgz#05c612c1dcaeb9ec4d7308ba0d795913d1f568de"
+  integrity sha512-7egQDgMpc7NS0twtllBq78FXCxYedQVxYu9bYj32OK99F3B1UsKB7abDs+r9RVCmtD7wrMa3kK9TV0fN4KZWrg==
+
+"@hotrungnhan/vue-prism-component@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@hotrungnhan/vue-prism-component/-/vue-prism-component-1.0.1.tgz#1d2a225ba64a1784ae061730afbb2feeefa0af78"
+  integrity sha512-Xp/H01QZACTw3cao90ot9ytx5hGsqwGELlUuxko/0Y47RE4Rw92xa3kSER2XTyiA0AzrSQxMYwvbhndrWg+mUw==
+  dependencies:
+    core-js "^3.6.5"
+    prismjs "^1.24.1"
+    vue "^3.0.0"
+
 "@humanwhocodes/config-array@^0.5.0":
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.5.0.tgz#1407967d4c6eecd7388f83acf1eaf4d0c6e58ef9"
@@ -1091,6 +1105,11 @@
   version "1.0.0-next.17"
   resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.17.tgz#25fdbdfd282c2f86ddf3fcefbd98be99cd2627e2"
   integrity sha512-0p1rCgM3LLbAdwBnc7gqgnvjHg9KpbhcSphergHShlkWz8EdPawoMJ3/VbezI0mGC5eKCDzMaPgF9Yca6cKvrg==
+
+"@popperjs/core@^2.9.2", "@popperjs/core@^2.9.3":
+  version "2.9.3"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.9.3.tgz#8b68da1ebd7fc603999cf6ebee34a4899a14b88e"
+  integrity sha512-xDu17cEfh7Kid/d95kB6tZsLOmSWKCZKtprnhVepjsSaCij+lM3mItSJDuuHDMbCWTh8Ejmebwb+KONcCJ0eXQ==
 
 "@sideway/address@^4.1.0":
   version "4.1.2"
@@ -1868,11 +1887,6 @@ acorn@^8.0.4, acorn@^8.0.5, acorn@^8.4.1:
   version "8.4.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.4.1.tgz#56c36251fc7cabc7096adc18f05afe814321a28c"
   integrity sha512-asabaBSkEKosYKMITunzX177CXxQ4Q8BSSzMTKD+FefUhipQC70gfW5SiUDhYQ3vk8G+81HqQk7Fv9OXwwn9KA==
-
-add@^2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/add/-/add-2.0.6.tgz#248f0a9f6e5a528ef2295dbeec30532130ae2235"
-  integrity sha1-JI8Kn25aUo7yKV2+7DBTITCuIjU=
 
 address@^1.1.2:
   version "1.1.2"
@@ -2986,6 +3000,11 @@ csstype@^2.6.8:
   version "2.6.17"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.17.tgz#4cf30eb87e1d1a005d8b6510f95292413f6a1c0e"
   integrity sha512-u1wmTI1jJGzCJzWndZo8mk4wnPTZd1eOIYTYvuEyOQGfmDl3TrabCCfKnOC86FZwW/9djqTl933UF/cS425i9A==
+
+debounce@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/debounce/-/debounce-1.2.1.tgz#38881d8f4166a5c5848020c11827b834bcb3e0a5"
+  integrity sha512-XRRe6Glud4rd/ZGQfiV1ruXSfbvfJedlV9Y6zOlP+2K04vBYiJEte6stfFkCP03aMnY5tsipamumUjL14fofug==
 
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3:
   version "2.6.9"
@@ -7575,6 +7594,14 @@ vue-template-es2015-compiler@^1.9.0:
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
+
+vue3-popper@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/vue3-popper/-/vue3-popper-1.2.1.tgz#1f0008a200dea6540c93da8ada0cf2f5282ca433"
+  integrity sha512-5dNp/ZBWOpPs+4/XulmKVQdlCvQkJD4ePRXJY6kd60TIwDgruEgDgGApdmO6s+M+QGjENV0mABbDLK1qCIoxgw==
+  dependencies:
+    "@popperjs/core" "^2.9.2"
+    debounce "^1.2.1"
 
 vue@^2.6.11:
   version "2.6.14"
