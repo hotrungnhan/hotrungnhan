@@ -1,10 +1,18 @@
 <template >
   <HelloWorld />
-  <!-- <input v-model="string" v-on:click="abc" type="text" @keyup.enter="submit" /> -->
+  <!-- <h1 v-text="currentTheme" /> -->
+  <!-- <input
+    @focusout="
+      (e) => {
+        console.log(`out`);
+      }
+    "
+  /> -->
+  <!-- <button v-on:click="updateTheme" v-text="`123456789`" /> -->
 </template>
 
 <script>
-import { inject, ref } from "vue";
+// import {  } from "vue";
 import HelloWorld from "./components/HelloWorld.vue";
 export default {
   name: "App",
@@ -12,12 +20,9 @@ export default {
     HelloWorld,
   },
   setup() {
-    var string = ref("");
-    var update = inject("updateLocalize");
-    function submit() {
-      update(string.value);
-    }
-    return { submit, string };
+    // var currentTheme = inject("currentTheme");
+    // var updateTheme = inject("updateTheme");
+    // return { currentTheme, updateTheme };
   },
 };
 </script>

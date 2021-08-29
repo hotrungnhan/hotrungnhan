@@ -2,15 +2,16 @@
   <div class="sticky top-0 z-50">
     <div class="w-min h-24 relative">
       <div
-        class="h-screen no-scrollbar"
+        class="no-scrollbar"
+        v-clickoutside="closeNavigation"
         :class="
           navtoggle
-            ? 'bg-gray-100 dark:bg-gray-700 overflow-x-hidden overflow-y-auto'
-            : 'overflow-y-hidden'
+            ? 'bg-gray-100 dark:bg-gray-700 overflow-x-hidden overflow-y-auto h-screen '
+            : 'overflow-y-hidden '
         "
       >
         <button
-          v-on:click="openNavigation()"
+          v-on:click="openNavigation"
           class="nav-toggle-btn text-darkmode"
           :class="navtoggle ? '' : 'nav-toggle-btn-toggled'"
         >
@@ -18,48 +19,51 @@
             :icon="navtoggle ? ['fas', 'times'] : ['fas', 'bars']"
           />
         </button>
-        <nav
-          id="navigation"
-          class="top-24 left-0 text-darkmode"
-          :class="navtoggle ? 'toggled' : ''"
-        >
-          <a href="#"> <font-awesome-icon :icon="['fab', 'twitter']" /></a>
-          <a href="#"> <font-awesome-icon :icon="['fab', 'codepen']" /></a>
-          <a href="#"> <font-awesome-icon :icon="['fas', 'user-secret']" /></a>
-          <a href="#">
-            <font-awesome-icon :icon="['fab', 'facebook']" />
-          </a>
-          <Popper
-            hover
-            placement="right"
-            openDelay="200"
-            closeDelay="200"
-            zIndex="999999"
-            :class="isdark ? 'dark' : 'light'"
-            :arrow="true"
-            :content="
-              t(isdark ? 'navigation.mode-light' : 'navigation.mode-dark')
-            "
+        <transition name="slide-fade" mode="out-in">
+          <nav
+            id="navigation"
+            class="top-24 left-0 text-darkmode toggled"
+            v-if="navtoggle"
           >
-            <a v-on:click="darkSwap">
-              <font-awesome-icon :icon="['fas', 'tint']" />
+            <a href="#"> <font-awesome-icon :icon="['fab', 'twitter']" /></a>
+            <a href="#"> <font-awesome-icon :icon="['fab', 'codepen']" /></a>
+            <a href="#">
+              <font-awesome-icon :icon="['fas', 'user-secret']"
+            /></a>
+            <a href="#">
+              <font-awesome-icon :icon="['fab', 'facebook']" />
             </a>
-          </Popper>
-          <Popper
-            hover
-            placement="right"
-            openDelay="200"
-            zIndex="999999"
-            :class="isdark ? 'dark' : 'light'"
-            closeDelay="200"
-            :arrow="true"
-            :content="t('navigation.change-language')"
-          >
-            <a v-on:click="langSwap">
-              <h1>{{ localize }}</h1>
-            </a>
-          </Popper>
-        </nav>
+            <Popper
+              hover
+              placement="right"
+              openDelay="0"
+              closeDelay="100"
+              :class="isdark ? 'dark' : 'light'"
+              :arrow="true"
+              :content="
+                t(isdark ? 'navigation.mode-light' : 'navigation.mode-dark')
+              "
+            >
+              <a v-on:click="darkSwap">
+                {{ currentTheme }}
+              </a>
+            </Popper>
+            <Popper
+              hover
+              placement="right"
+              openDelay="0"
+              closeDelay="100"
+              zIndex="999999"
+              :class="isdark ? 'dark' : 'light'"
+              :arrow="true"
+              :content="t('navigation.change-language')"
+            >
+              <a v-on:click="langSwap">
+                <h4>{{ locale }}</h4>
+              </a>
+            </Popper>
+          </nav>
+        </transition>
       </div>
     </div>
   </div>
@@ -139,21 +143,27 @@
   }
 }
 
+.slide-fade-enter-active {
+  @apply transition-all transform -translate-x-8;
+}
+.slide-fade-leave-active {
+  @apply transition-all;
+}
+.slide-fade-enter-to {
+  @apply transform translate-x-0;
+}
+.slide-fade-leave-to {
+  @apply transform  -translate-x-32;
+}
 #navigation {
   a {
-    @apply block text-center p-5 text-4xl w-24 h-24 transition-all -ml-48;
-  }
-  &.toggled {
-    a {
-      @apply ml-0;
-    }
+    @apply block text-center p-5 text-4xl w-24 h-24 select-none;
   }
 }
 .nav-toggle-btn {
   @apply w-24 h-24 border-none text-4xl transition-transform p-0 focus:outline-none;
   &-toggled {
-    /* @apply rotate-180; */
-    transform: rotate(-180deg);
+    @apply transform rotate-180;
   }
 }
 </style>
@@ -163,6 +173,7 @@ import "prismjs";
 import "@hotrungnhan/vue-prism-component/theme/prism-window.css";
 import Popper from "vue3-popper";
 import { useI18n } from "vue-i18n";
+
 import { inject, ref } from "vue";
 export default {
   name: "HelloWorld",
@@ -171,22 +182,29 @@ export default {
   },
   setup() {
     let isdark = inject("isDark");
-    let updateisdark = inject("updateIsDark");
-    let localize = inject("localize");
-    let updateLocalize = inject("updateLocalize");
+    let currentTheme = inject("currentTheme");
+    let nextTheme = inject("updateTheme");
+    // let localize = inject("localize");
+    // let updateLocalize = inject("updateLocalize");
     let navtoggle = ref(false);
-    let { t } = useI18n();
+    let { t, locale } = useI18n();
     function openNavigation() {
       navtoggle.value = !navtoggle.value;
     }
-    function darkSwap() {
-      updateisdark(!isdark.value);
+    function closeNavigation() {
+      navtoggle.value = false;
     }
+    function darkSwap() {
+      nextTheme();
+    }
+
     function langSwap() {
-      updateLocalize(localize.value == "vi" ? "en" : "vi");
+      locale.value = locale.value == "vi" ? "en" : "vi";
     }
     return {
-      localize,
+      closeNavigation,
+      locale,
+      currentTheme,
       isdark,
       navtoggle,
       openNavigation,
@@ -195,6 +213,23 @@ export default {
       Popper,
       t,
     };
+  },
+  directives: {
+    clickoutside: {
+      created(el, binding) {
+        el.clickOutsideEvent = function (event) {
+          // here I check that click was outside the el and his children
+          if (!(el == event.target || el.contains(event.target))) {
+            // and if it did, call method provided in attribute value
+            binding.value();
+          }
+        };
+        document.body.addEventListener("click", el.clickOutsideEvent);
+      },
+      unmounted(el) {
+        document.body.removeEventListener("click", el.clickOutsideEvent);
+      },
+    },
   },
 };
 </script>

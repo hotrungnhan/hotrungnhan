@@ -17,4 +17,3 @@ app
   .use(Prismjs)
   .component('font-awesome-icon', FontAwesomeIcon)
   .mount('#app')
-  app.$i19

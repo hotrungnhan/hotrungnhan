@@ -8,6 +8,8 @@ export function setupI18n() {
     locale: process.env.VUE_APP_I18N_LOCALE || 'en',
     fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE || 'en',
     legacy: true,
+    silentFallbackWarn: true,
+    silentTranslationWarn: true,
   })
 
   loadLocaleMessages(i18n, process.env.VUE_APP_I18N_LOCALE)
