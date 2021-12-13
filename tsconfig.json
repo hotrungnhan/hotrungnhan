@@ -12,9 +12,18 @@
         "lib": [
             "esnext",
             "dom"
-        ]
+        ],
+        "baseUrl": ".",
+        "rootDir": ".",
+        "paths": {
+            "@/*": [
+                "./src/*"
+            ]
+        },
+        "allowJs": true
     },
     "include": [
+        "src/**/*.json",
         "src/**/*.ts",
         "src/**/*.d.ts",
         "src/**/*.tsx",

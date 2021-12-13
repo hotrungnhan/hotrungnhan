@@ -10,7 +10,7 @@ import {
   faCodepen, faTwitter, faAmazon,
 } from '@fortawesome/free-brands-svg-icons'
 
-let font = [
+const font = [
   faUserSecret,
   faFacebook,
   faCodepen,

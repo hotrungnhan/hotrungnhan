@@ -1,0 +1,28 @@
+{
+    "root": true,
+    "parser": "vue-eslint-parser",
+    "rules": {
+        "@typescript-eslint/no-var-requires": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-undef": "off",
+        "no-undef": "off"
+        // "vue/html-indent": "off"
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "extends": [
+        "plugin:vue/vue3-recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "ignorePatterns": [
+        "node_modules/**/*",
+        "dist"
+    ],
+    "parserOptions": {
+        "parser": "@typescript-eslint/parser",
+        "sourceType": "module"
+    }
+}

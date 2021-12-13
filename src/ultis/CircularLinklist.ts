@@ -10,7 +10,7 @@ export class CircularLinkList extends Array {
   }
   next() {
     if (this && Array.isArray(this)) {
-      let pointer = ++this.pointer
+      const pointer = ++this.pointer
       if (pointer < this.length && pointer >= 0) return this[pointer]
       else {
         if (this.length > 0) {

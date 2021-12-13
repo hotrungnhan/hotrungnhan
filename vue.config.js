@@ -1,6 +1,7 @@
 // vue.config.js
 
 /**
+ * @deprecated
  * @type {import('@vue/cli-service').ProjectOptions}
  */
 module.exports = {
@@ -18,7 +19,7 @@ module.exports = {
       filename: 'index.html',
       // when using title option,
       // template title tag needs to be <title><%= htmlWebpackPlugin.options.title %></title>
-      title: 'Hồ Trung Nhân',
+      title: 'Hồ Trung Nhân ⚡',
       // chunks to include on this page, by default includes
       // extracted common chunks and vendor chunks.
       chunks: ['chunk-vendors', 'chunk-common', 'index'],

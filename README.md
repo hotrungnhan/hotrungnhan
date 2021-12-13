@@ -19,6 +19,7 @@ yarn build
 ### Lints and fixes files
 ```
 yarn lint
+yarn lint:fix
 ```
 
 ### Customize configuration

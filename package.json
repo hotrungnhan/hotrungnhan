@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build ",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint \"src/**/*.{ts,js,json,vue}\"",
+    "lint:fix": "eslint --fix \"src/**/*.{ts,js,json,vue}\""
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -23,6 +25,8 @@
   },
   "devDependencies": {
     "@types/tailwindcss": "^2.2.4",
+    "@typescript-eslint/eslint-plugin": "^5.6.0",
+    "@typescript-eslint/parser": "^5.6.0",
     "@vitejs/plugin-vue": "^2.0.0",
     "autoprefixer": "^10.3.2",
     "babel-plugin-prismjs": "^2.1.0",
@@ -34,6 +38,7 @@
     "tailwindcss": "latest",
     "typescript": "^4.5.3",
     "vite": "^2.7.1",
+    "vite-tsconfig-paths": "^3.3.17",
     "vue-cli-plugin-vite": "^1.5.0",
     "vue-tsc": "^0.29.8"
   }
