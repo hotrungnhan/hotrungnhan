@@ -1,30 +1,23 @@
-<template >
-  <HelloWorld />
-  <!-- <h1 v-text="currentTheme" /> -->
-  <!-- <input
-    @focusout="
-      (e) => {
-        console.log(`out`);
-      }
-    "
-  /> -->
-  <!-- <button v-on:click="updateTheme" v-text="`123456789`" /> -->
+<template>
+	<GlobalStorge>
+		<HelloWorld />
+		<ListGithubRepo />
+	</GlobalStorge>
 </template>
 
 <script>
 // import {  } from "vue";
 import HelloWorld from "./components/HelloWorld.vue";
+import ListGithubRepo from "./components/ListGithubRepo.vue";
+import GlobalStorge from "./storage/GlobalStorge.vue";
 export default {
-  name: "App",
-  components: {
-    HelloWorld,
-  },
-  setup() {
-    // var currentTheme = inject("currentTheme");
-    // var updateTheme = inject("updateTheme");
-    // return { currentTheme, updateTheme };
-  },
+	name: "App",
+	components: {
+		HelloWorld,
+		ListGithubRepo,
+		GlobalStorge
+	},
+	setup() {}
 };
 </script>
-<style scoped lang="postcss">
-</style>
+<style scoped lang="postcss"></style>

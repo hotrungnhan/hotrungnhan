@@ -17,7 +17,7 @@ export class CircularLinkList extends Array {
           this.pointer = 0
           return this[this.pointer]
         } else {
-          throw Error("Linklist in't contain any element")
+          return undefined;
         }
       }
     }
