@@ -20,6 +20,9 @@
 		}
 	}
 }
+* {
+  @apply rotate-0;
+}
 html,
 body {
 	@apply overflow-x-hidden overflow-y-auto  h-screen relative background-darkmode;

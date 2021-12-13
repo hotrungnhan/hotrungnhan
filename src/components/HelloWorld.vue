@@ -212,16 +212,16 @@ export default {
 }
 
 .slide-fade-enter-active {
-  @apply transition-all transform -translate-x-8;
+  @apply transition-all transform-gpu -translate-x-8;
 }
 .slide-fade-leave-active {
   @apply transition-all;
 }
 .slide-fade-enter-to {
-  @apply transform translate-x-0;
+  @apply translate-x-0;
 }
 .slide-fade-leave-to {
-  @apply transform  -translate-x-32;
+  @apply -translate-x-32;
 }
 #navigation {
   a {
@@ -231,7 +231,7 @@ export default {
 .nav-toggle-btn {
   @apply w-24 h-24 border-none text-4xl transition-transform p-0 focus:outline-none;
   &-toggled {
-    @apply transform rotate-180;
+    @apply transform-gpu rotate-180;
   }
 }
 </style>

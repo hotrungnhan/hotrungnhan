@@ -33,8 +33,6 @@
     "postcss": "^8.3.6",
     "postcss-extend": "^1.0.5",
     "postcss-import": "^14.0.2",
-    "postcss-nested": "^5.0.6",
-    "postcss-nesting": "^10.0.3",
     "tailwindcss": "latest",
     "typescript": "^4.5.3",
     "vite": "^2.7.1",

@@ -1,4 +1,4 @@
-name: Build Vue
+name: build Vue
 on: push
 jobs:
   build_vue:
@@ -9,8 +9,8 @@ jobs:
       - id: Build-Vue
         uses: hotrungnhan/VuePagesAction@1.0.1
         with:
-          username: 'hotrungnhan'
-          reponame: 'hotrungnhan'
+          username: "hotrungnhan"
+          reponame: "hotrungnhan"
           cname: "hotrungnhan.tk"
           token: ${{ secrets.GITHUB_TOKEN }}
         env:
