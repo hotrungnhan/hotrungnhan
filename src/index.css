@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  @apply m-auto w-full h-full dark:bg-slate-700 dark:text-white;
+}
