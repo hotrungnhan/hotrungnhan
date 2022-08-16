@@ -1,0 +1,1 @@
+var e={"lp-title":"oh hehe boys","lp-paragraph":"X\xECn ch\xE0o m\u1ECDi ng\u01B0\u1EDDi m\xECnh l\xE0 H\u1ED3 Trung Nh\xE2n, m\u1ED9t deverloper \u0111\u1EB9p trai cute... =))"};export{e as default};
