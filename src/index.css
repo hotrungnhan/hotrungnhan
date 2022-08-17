@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body::-webkit-scrollbar {
+  @apply hidden;
+}
 #root {
   @apply m-auto w-full h-full dark:bg-slate-700 dark:text-white;
 }
