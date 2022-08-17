@@ -8,3 +8,10 @@ body::-webkit-scrollbar {
 #root {
   @apply m-auto w-full h-full dark:bg-slate-700 dark:text-white;
 }
+.react-pdf__Page {
+  svg,
+  canvas {
+    @apply w-auto h-auto !important;
+    @apply rounded-xl overflow-hidden;
+  }
+}

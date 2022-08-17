@@ -5,8 +5,13 @@ import {
   faGithub,
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons'
+import {
+  faMoon,
+  faSun,
+  faAngleRight,
+  faAngleLeft,
+} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { SunIcon, MoonIcon } from '@heroicons/react/outline'
 import Step from '@mui/material/Step'
 import StepContent from '@mui/material/StepContent'
 import StepLabel from '@mui/material/StepLabel'
@@ -15,6 +20,8 @@ import classNames from 'classnames'
 import { AnimatePresence, motion, useScroll } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import { withTranslation } from 'react-i18next'
+import { Document, Page, pdfjs } from 'react-pdf'
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`
 
 function App() {
   const { scrollY } = useScroll()
@@ -78,7 +85,9 @@ function App() {
         </section>
         {/* contact */}
         <section className="flex flex-col gap-4">
-          <a className="font-poiret-one text-xl font-bold">Contact me at :</a>
+          <a className="font-poiret-one font-bold md:text-2xl">
+            Contact me at :
+          </a>
           {SocialRender()}
         </section>
       </main>
@@ -91,7 +100,7 @@ const steps = [
     label: 'Download My Curriculum Vitae',
     description:
       'An ad group contains one or more ads which target a shared set of keywords.',
-    content: () => <a>CV</a>,
+    content: () => <a>{<RenderPdf></RenderPdf>}</a>,
   },
   {
     label: 'Tego Global',
@@ -126,7 +135,7 @@ function VerticalLinearStepper() {
     <motion.div
       initial={{ opacity: 0, transitionDelay: '4000', x: '-50%' }}
       whileInView={{ opacity: 1, x: '0', animationDuration: '2s' }}
-      className="m-auto mx-8 flex flex-col gap-4 sm:grid sm:flex-none sm:grid-cols-5 sm:gap-8"
+      className="m-auto mx-8 flex flex-col gap-4 md:grid md:flex-none md:grid-cols-5 md:gap-8"
     >
       <Stepper
         activeStep={activeStep}
@@ -151,8 +160,12 @@ function VerticalLinearStepper() {
                   icon: iconComponent,
                 }}
               >
-                <h1 className="dark:text-white">{step.label}</h1>
-                {step.date && <a className="dark:text-white">{step.date}</a>}
+                <div className="flex flex-col gap-1">
+                  <h1 className="font-poiret-one text-xl font-bold dark:text-white md:text-2xl">
+                    {step.label}
+                  </h1>
+                  {step.date && <a className="dark:text-white">{step.date}</a>}
+                </div>
               </StepLabel>
               <StepContent TransitionProps={{ unmountOnExit: false }}>
                 {step.description ? step.description : null}
@@ -164,7 +177,7 @@ function VerticalLinearStepper() {
       <AnimatePresence>
         {steps[activeStep] && steps[activeStep].content && (
           <motion.div
-            className="order-first m-auto hidden sm:order-none sm:col-span-3 sm:mt-0 sm:block"
+            className="m-auto hidden sm:col-span-3 sm:mt-0 sm:block"
             key={activeStep}
             initial={{ opacity: 0, transitionDelay: '4000', x: '50%' }}
             animate={{ opacity: 1, x: '0', animationDuration: '2s' }}
@@ -275,28 +288,79 @@ function DarkModeToggle() {
     }
     localStorage.setItem('isDarkMode', String(isDarkMode))
   }, [isDarkMode])
+  const icon = isDarkMode ? (
+    <FontAwesomeIcon icon={faSun} className="h-12 w-12" key="sun" />
+  ) : (
+    <FontAwesomeIcon icon={faMoon} className="h-12 w-12" key="moon" />
+  )
   return (
     <button onClick={() => setIsDarkMode(!isDarkMode)}>
       <AnimatePresence>
-        {!isDarkMode ? (
-          <motion.div
-            key="moon"
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: '0' }}
-          >
-            <MoonIcon className="h-12 w-12" />
-          </motion.div>
-        ) : (
-          <motion.div
-            key="sun"
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: '0' }}
-          >
-            <SunIcon className="h-12 w-12" />
-          </motion.div>
-        )}
+        <motion.div
+          key={icon.key}
+          initial={{ opacity: 0, x: '100%' }}
+          animate={{ opacity: 1, x: '0' }}
+        >
+          {icon}
+        </motion.div>
       </AnimatePresence>
     </button>
+  )
+}
+
+function RenderPdf() {
+  const [numPages, setNumPages] = useState<number | null>(null)
+  const [pageNumber, setCurrentPage] = useState<number>(1)
+  const [isZoom, setIsZoom] = useState<boolean>(false)
+  console.log(numPages)
+
+  function onDocumentLoadSuccess({ numPages }: pdfjs.PDFDocumentProxy) {
+    setNumPages(numPages)
+    setIsZoom(false)
+  }
+  function nextPage() {
+    if (numPages && pageNumber < numPages) {
+      setCurrentPage(pageNumber + 1)
+    }
+  }
+  function prevPage() {
+    if (pageNumber > 1) {
+      setCurrentPage(pageNumber - 1)
+    }
+  }
+
+  return (
+    <Document
+      file="CV.pdf"
+      onLoadSuccess={onDocumentLoadSuccess}
+      className="relative flex flex-col gap-4"
+    >
+      <Page pageNumber={pageNumber} width={200} />
+      {numPages && isZoom && (
+        <div className="absolute inset-x-[calc(50%-100px)] bottom-[5%] flex flex-row justify-center rounded bg-white p-4 opacity-0  transition-opacity hover:opacity-100">
+          <FontAwesomeIcon
+            onClick={prevPage}
+            icon={faAngleLeft}
+            className="my-auto w-6"
+          />
+          <a className="my-auto">
+            {pageNumber} of {numPages}
+          </a>
+          <FontAwesomeIcon
+            onClick={nextPage}
+            icon={faAngleRight}
+            className="my-auto  w-6"
+          />
+        </div>
+      )}
+      <a
+        className="mx-auto inline-block rounded border-2 border-blue-600 px-6 py-2 text-xs font-medium uppercase leading-tight text-blue-600 transition duration-150 ease-in-out hover:bg-black/5 focus:outline-none focus:ring-0 dark:border-blue-300 dark:bg-gray-50  dark:hover:bg-white/75"
+        href="CV.pdf"
+        download="CV"
+      >
+        Download
+      </a>
+    </Document>
   )
 }
 export default withTranslation()(App)
