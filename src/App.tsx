@@ -61,10 +61,11 @@ function App() {
           <h1 className="font-poiret-one animate-pulse text-center text-5xl font-[300] sm:text-6xl md:text-7xl">
             <a className="inline-block animate-bounce">Hi&nbsp;</a>there, My
             name is&nbsp;
-            <i className="font-medium">Sterain </i>!
+            <i className="font-medium">Sterain </i>{' '}
+            <a className="animate-wiggle inline-block">!</a>
           </h1>
           <p className="font-poiret-one text-xl font-[100] sm:text-2xl md:text-4xl">
-            I am a Backend Developer base in HCMC, Viet Nam.
+            I am a Backend Developer living in Ho Chi Minh City, Viet Nam.
           </p>
         </section>
         {/* experience */}
@@ -132,46 +133,38 @@ function VerticalLinearStepper() {
         orientation="vertical"
         className="col-span-2"
       >
-        {steps.map((step, index) => (
-          <Step key={step.label} onClick={() => setActiveStep(index)}>
-            {index == activeStep ? (
-              <StepLabel
-                optional={<a className="dark:text-white">{step.optional}</a>}
-                StepIconProps={{
-                  icon: (
-                    <div className="relative h-[24px] w-[24px] animate-bounce items-center">
-                      <div className="absolute h-full w-full rounded-full bg-black dark:bg-slate-200"></div>
-                      <div className="absolute h-full w-full animate-ping rounded-full bg-black dark:bg-slate-200"></div>
-                    </div>
-                  ),
-                }}
-              >
-                <h1 className="dark:text-white">{step.label}</h1>
-                {step.date && <a>{step.date}</a>}
-              </StepLabel>
+        {steps.map((step, index) => {
+          const iconComponent =
+            index == activeStep ? (
+              <div className="relative h-[24px] w-[24px] animate-bounce items-center">
+                <div className="absolute h-full w-full rounded-full bg-black dark:bg-slate-200"></div>
+                <div className="absolute h-full w-full animate-ping rounded-full bg-black dark:bg-slate-200"></div>
+              </div>
             ) : (
+              <div className="m-auto h-[24px] w-[24px] items-center rounded-full bg-black dark:bg-slate-200"></div>
+            )
+          return (
+            <Step key={step.label} onClick={() => setActiveStep(index)}>
               <StepLabel
                 optional={<a className="dark:text-white">{step.optional}</a>}
                 StepIconProps={{
-                  icon: (
-                    <div className="m-auto h-[24px] w-[24px] items-center rounded-full bg-black dark:bg-slate-200"></div>
-                  ),
+                  icon: iconComponent,
                 }}
               >
                 <h1 className="dark:text-white">{step.label}</h1>
-                {step.date && <a>{step.date}</a>}
+                {step.date && <a className="dark:text-white">{step.date}</a>}
               </StepLabel>
-            )}
-            <StepContent TransitionProps={{ unmountOnExit: false }}>
-              {step.description ? step.description : null}
-            </StepContent>
-          </Step>
-        ))}
+              <StepContent TransitionProps={{ unmountOnExit: false }}>
+                {step.description ? step.description : null}
+              </StepContent>
+            </Step>
+          )
+        })}
       </Stepper>
       <AnimatePresence>
         {steps[activeStep] && steps[activeStep].content && (
           <motion.div
-            className="order-first hidden sm:order-none sm:col-span-3 sm:mt-0 sm:block"
+            className="order-first m-auto hidden sm:order-none sm:col-span-3 sm:mt-0 sm:block"
             key={activeStep}
             initial={{ opacity: 0, transitionDelay: '4000', x: '50%' }}
             animate={{ opacity: 1, x: '0', animationDuration: '2s' }}
@@ -207,7 +200,13 @@ const social = [
     link: 'https://www.linkedin.com/in/trung-nh%C3%A2n-b8bb271a5',
   },
   {
-    icon: <FontAwesomeIcon icon={faGithub} className="text-black " size="2x" />,
+    icon: (
+      <FontAwesomeIcon
+        icon={faGithub}
+        className="text-black dark:text-white "
+        size="2x"
+      />
+    ),
     text: 'Github',
     link: 'https://github.com/hotrungnhan',
   },
@@ -285,7 +284,7 @@ function DarkModeToggle() {
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: '0' }}
           >
-            <MoonIcon className="h-8 w-8" />
+            <MoonIcon className="h-12 w-12" />
           </motion.div>
         ) : (
           <motion.div
@@ -293,7 +292,7 @@ function DarkModeToggle() {
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: '0' }}
           >
-            <SunIcon className="h-8 w-8" />
+            <SunIcon className="h-12 w-12" />
           </motion.div>
         )}
       </AnimatePresence>
