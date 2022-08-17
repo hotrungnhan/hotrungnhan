@@ -1,1 +1,0 @@
-const e={"change-language":"Change Language","mode-dark":"Dark Mode","mode-light":"Light Mode"};var o={"lp-title":"A Passioner Deverloop from vietnamse","lp-paragraph":"hello i18n !! A Passioner Deverloop from vietnamseA Passioner Deverloop from vietnamseA Passioner Deverloop from vietnamseA Passioner Deverloop from vietnamse",navigation:e};export{o as default,e as navigation};
