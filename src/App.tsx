@@ -109,11 +109,10 @@ const steps = [
       'An ad group contains one or more ads which target a shared set of keywords.',
     date: "Sep '19 - Present",
     content: () => (
-      <a>
-        For each ad campaign that you create, you can control how much
-        you&apos;re willing to spend on clicks and conversions, which networks
-        and geographical locations you want your ads to show on, and more.
-      </a>
+      <>
+        <a></a>
+        <img src="tego.webp" className="rounded"></img>
+      </>
     ),
   },
   {
@@ -123,7 +122,10 @@ const steps = [
               and geographical locations you want your ads to show on, and more.`,
     date: "Sep '19 - Present",
     content: () => (
-      <img src="https://tuyensinh.uit.edu.vn/sites/default/files/uploads/images/201803/uit_dsc_0002_1-1.jpg"></img>
+      <img
+        className="rounded"
+        src="https://tuyensinh.uit.edu.vn/sites/default/files/uploads/images/201803/uit_dsc_0002_1-1.jpg"
+      ></img>
     ),
   },
 ]
@@ -252,12 +254,15 @@ function SocialRender() {
       {social.map((item, idx) => (
         <motion.div
           key={idx}
-          initial={{ opacity: 0, transitionDelay: '4000', x: '-50%' }}
+          initial={{
+            opacity: 0,
+            x: '-50%',
+            animationDuration: `2s`,
+          }}
           whileInView={{
             opacity: 1,
             x: '0',
-            animationDuration: '2s',
-            transitionDelay: '4s',
+            animationDuration: `2s`,
           }}
         >
           <div className=" flex w-full shrink-0 flex-row gap-4">
@@ -311,12 +316,9 @@ function DarkModeToggle() {
 function RenderPdf() {
   const [numPages, setNumPages] = useState<number | null>(null)
   const [pageNumber, setCurrentPage] = useState<number>(1)
-  const [isZoom, setIsZoom] = useState<boolean>(false)
-  console.log(numPages)
 
   function onDocumentLoadSuccess({ numPages }: pdfjs.PDFDocumentProxy) {
     setNumPages(numPages)
-    setIsZoom(false)
   }
   function nextPage() {
     if (numPages && pageNumber < numPages) {
@@ -335,9 +337,19 @@ function RenderPdf() {
       onLoadSuccess={onDocumentLoadSuccess}
       className="relative flex flex-col gap-4"
     >
-      <Page pageNumber={pageNumber} width={200} />
-      {numPages && isZoom && (
-        <div className="absolute inset-x-[calc(50%-100px)] bottom-[5%] flex flex-row justify-center rounded bg-white p-4 opacity-0  transition-opacity hover:opacity-100">
+      <div className="md:flex md:gap-4 md:flex-row">
+        <Page pageNumber={1} height={150} />
+        <Page pageNumber={2} height={150} className="hidden md:block" />
+      </div>
+      <a
+        className="mx-auto inline-block rounded border-2 border-blue-600 px-6 py-2 text-xs font-medium uppercase leading-tight text-blue-600 transition duration-150 ease-in-out hover:bg-black/5 focus:outline-none focus:ring-0 dark:border-blue-300 dark:bg-gray-50  dark:hover:bg-white/75"
+        href="CV.pdf"
+        download="CV"
+      >
+        Download
+      </a>
+      {
+        <div className="absolute inset-x-[calc(50%-100px)] bottom-[5%] flex flex-row justify-center rounded bg-white p-4 opacity-0  transition-opacity hover:opacity-100 md:hidden">
           <FontAwesomeIcon
             onClick={prevPage}
             icon={faAngleLeft}
@@ -352,14 +364,7 @@ function RenderPdf() {
             className="my-auto  w-6"
           />
         </div>
-      )}
-      <a
-        className="mx-auto inline-block rounded border-2 border-blue-600 px-6 py-2 text-xs font-medium uppercase leading-tight text-blue-600 transition duration-150 ease-in-out hover:bg-black/5 focus:outline-none focus:ring-0 dark:border-blue-300 dark:bg-gray-50  dark:hover:bg-white/75"
-        href="CV.pdf"
-        download="CV"
-      >
-        Download
-      </a>
+      }
     </Document>
   )
 }
