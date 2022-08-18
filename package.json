@@ -32,8 +32,7 @@
     "tailwindcss": "^3.1.8",
     "tailwindcss-debug-screens": "^2.2.1",
     "tw-elements": "^1.0.0-alpha12",
-    "vite-plugin-html": "^3.2.0",
-    "vite-plugin-shim-react-pdf": "^1.0.7"
+    "vite-plugin-html": "^3.2.0"
   },
   "devDependencies": {
     "@types/node": "^18.7.6",
