@@ -6,6 +6,7 @@ import { I18nextProvider } from 'react-i18next'
 import App from './App'
 import './index.css'
 import 'tw-elements/dist/js/index.min.js'
+import { DarkModeProvider } from './dark.context'
 import { language } from './language'
 
 i18next.use(initReactI18next).init({
@@ -16,8 +17,9 @@ i18next.use(initReactI18next).init({
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <I18nextProvider i18n={i18next}>
-      <App />
+      <DarkModeProvider>
+        <App />
+      </DarkModeProvider>
     </I18nextProvider>
-    ,
   </React.StrictMode>
 )
