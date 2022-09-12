@@ -1,9 +1,10 @@
 import classNames from 'classnames'
+import React from 'react'
 import { withTranslation } from 'react-i18next'
-import DarkToggleButton from './dark.button'
+const DarkToggleButton = React.lazy(() => import('./dark.button'))
+const RoadmapComponent = React.lazy(() => import('./roadmap.component'))
+const SocialComponent = React.lazy(() => import('./social.component'))
 import { useDarkMode } from './dark.context'
-import RoadmapComponent from './roadmap.component'
-import SocialComponent from './social.component'
 import { useScrollDown } from './useScrollDown'
 function App() {
   const [isScroll] = useScrollDown()

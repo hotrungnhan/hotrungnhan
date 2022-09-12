@@ -3,8 +3,11 @@ import StepContent from '@mui/material/StepContent'
 import StepLabel from '@mui/material/StepLabel'
 import Stepper from '@mui/material/Stepper'
 import { AnimatePresence, motion } from 'framer-motion'
+import React from 'react'
 import { useState } from 'react'
-import PdfComponent from './pdf.component'
+
+const PdfComponent = React.lazy(() => import('./pdf.component'))
+
 const steps = [
   {
     label: 'Download My Curriculum Vitae',
@@ -31,12 +34,7 @@ const steps = [
                 you're willing to spend on clicks and conversions, which networks
                 and geographical locations you want your ads to show on, and more.`,
     date: "Sep '19 - Present",
-    content: () => (
-      <img
-        className="rounded"
-        src="https://tuyensinh.uit.edu.vn/sites/default/files/uploads/images/201803/uit_dsc_0002_1-1.jpg"
-      ></img>
-    ),
+    content: () => <img className="rounded" src="uit.png"></img>,
   },
 ]
 

@@ -7,7 +7,7 @@ import App from './App'
 import './index.css'
 import 'tw-elements/dist/js/index.min.js'
 import { DarkModeProvider } from './dark.context'
-import { language } from './language'
+import { language } from './language.i18'
 
 i18next.use(initReactI18next).init({
   resources: language,
