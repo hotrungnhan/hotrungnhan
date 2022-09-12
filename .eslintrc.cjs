@@ -68,5 +68,6 @@ module.exports = {
     ],
     'tailwindcss/no-contradicting-classname': 'error',
     'prettier/prettier': 'error',
+    "no-unused-vars": "warn",
   },
 }

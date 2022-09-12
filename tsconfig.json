@@ -27,7 +27,8 @@
     }
   },
   "include": [
-    "src"
+    "src",
+    "abs_path.plugin.ts"
   ],
   "references": [
     {

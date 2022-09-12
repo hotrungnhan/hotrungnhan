@@ -20,8 +20,13 @@ import classNames from 'classnames'
 import { AnimatePresence, motion, useScroll } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import { withTranslation } from 'react-i18next'
-import { Document, Page, pdfjs } from 'react-pdf'
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`
+import { pdfjs } from 'react-pdf'
+import { Document, Page } from 'react-pdf'
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  '../node_modules/pdfjs-dist/legacy/build/pdf.worker.min.js',
+  import.meta.url
+).href
+//`//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`
 
 function App() {
   const { scrollY } = useScroll()
@@ -337,7 +342,7 @@ function RenderPdf() {
       onLoadSuccess={onDocumentLoadSuccess}
       className="relative flex flex-col gap-4"
     >
-      <div className="md:flex md:gap-4 md:flex-row">
+      <div className="md:flex md:flex-row md:gap-4">
         <Page pageNumber={1} height={150} />
         <Page pageNumber={2} height={150} className="hidden md:block" />
       </div>
