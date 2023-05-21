@@ -12,14 +12,14 @@
 
 A passionate self-taught backend deverloper in vietnam 
 
-* 🌱 I’m currently learning Golang 
+* 🌱 I’m currently a C# backend developer  
 * 💬 Ask me about anything [here](https://github.com/hotrungnhan/hotrungnhan/issues)
-### Sở thích
-* 🎸Chơi nhạc cụ
-* 🎮 Chơi game
-* 🖥 Công Nghệ, Phần cứng máy tính
-* 🍲 Ăn
-###  Những Ngôn Ngữ và tools:
+### Favour
+* 🎸Play instrucment
+* 🎮 Gaming time
+* 🖥 Techie
+* 🍲 Food
+###  Language and tools:
 <img alt="golang" src="https://raw.githubusercontent.com/hotrungnhan/hotrungnhan/c0d828254e3c3170f72380df4dc8403e0bec446f/assest/golang.svg" width="30"><img alt="android" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assest/android.svg?raw=true" width="30">
 <img  alt="js" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assest/javascript.gif?raw=true" width="30">
 <img alt="C#" src="https://raw.githubusercontent.com/hotrungnhan/hotrungnhan/c0d828254e3c3170f72380df4dc8403e0bec446f/assest/c%23.svg" width="30">
@@ -27,8 +27,7 @@ A passionate self-taught backend deverloper in vietnam
 <img alt="postgres" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assest/postgresql.svg?raw=true" width="30">
 <img alt="mongodb" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assest/mongodb.svg?raw=true" width="30">
 <img alt="firebase" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assest/firebase.svg?raw=true" width="30">
-### Kĩ năng thêm 
-* Sử dụng các công cụ adobe như PTS,Premiere,XD, ...
+
 ### Github stats
 
 <a href="https://github.com/anuraghazra/github-readme-stats">
