@@ -26,8 +26,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require('tw-elements/dist/plugin'),
-    require('tailwindcss-debug-screens'),
-  ],
+  plugins: [require('tailwindcss-debug-screens')],
 }

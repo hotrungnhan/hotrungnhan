@@ -63,11 +63,10 @@ module.exports = {
       'warn',
       {
         config: 'tailwind.config.cjs',
-        cssFiles: ['./node_modules/tw-elements/dist/css/index.min.css'],
       },
     ],
     'tailwindcss/no-contradicting-classname': 'error',
     'prettier/prettier': 'error',
-    "no-unused-vars": "warn",
+    'no-unused-vars': 'warn',
   },
 }

@@ -5,7 +5,6 @@ import { initReactI18next } from 'react-i18next'
 import { I18nextProvider } from 'react-i18next'
 import App from './App'
 import './index.css'
-import 'tw-elements/dist/js/index.min.js'
 import { DarkModeProvider } from './dark.context'
 import { language } from './language.i18'
 

@@ -14,27 +14,72 @@ const steps = [
     description:
       'An ad group contains one or more ads which target a shared set of keywords.',
     content: () => <a>{<PdfComponent></PdfComponent>}</a>,
+    icon: <a></a>,
   },
   {
-    label: 'Tego Global',
-    optional: 'Junior Backend Developer',
+    label: 'Beep - AF Pay',
+    optional: 'Lead Software Developer',
     description:
       'An ad group contains one or more ads which target a shared set of keywords.',
-    date: "Sep '19 - Present",
+    date: "Jan '21 - May '23",
     content: () => (
       <>
         <a></a>
         <img src="tego.webp" className="rounded"></img>
       </>
     ),
+    icon: <a></a>,
+  },
+  {
+    label: 'Heal Asia',
+    optional: 'Software Developer',
+    description:
+      'An ad group contains one or more ads which target a shared set of keywords.',
+    date: "Jan '21 - May '23",
+    content: () => (
+      <>
+        <a></a>
+        <img src="tego.webp" className="rounded"></img>
+      </>
+    ),
+    icon: <a></a>,
+  },
+  {
+    label: 'Viva Leisure',
+    optional: 'Lead Software Developer',
+    description:
+      'An ad group contains one or more ads which target a shared set of keywords.',
+    date: "Jan '21 - May '23",
+    content: () => (
+      <>
+        <a></a>
+        <img src="tego.webp" className="rounded"></img>
+      </>
+    ),
+    icon: <a></a>,
+  },
+  {
+    label: 'Tego Global',
+    optional: 'Fullstack Software Developer',
+    description:
+      'An ad group contains one or more ads which target a shared set of keywords.',
+    date: "Jan '21 - May '23",
+    content: () => (
+      <>
+        <a></a>
+        <img src="tego.webp" className="rounded"></img>
+      </>
+    ),
+    icon: <a></a>,
   },
   {
     label: 'HCM - University of Technology and Information',
     description: `For each ad campaign that you create, you can control how much
                 you're willing to spend on clicks and conversions, which networks
                 and geographical locations you want your ads to show on, and more.`,
-    date: "Sep '19 - Present",
+    date: "Sep '19 - Jul '23",
     content: () => <img className="rounded" src="uit.png"></img>,
+    icon: <a></a>,
   },
 ]
 

@@ -28,7 +28,7 @@ const social = [
       />
     ),
     text: 'Linkedin',
-    link: 'https://www.linkedin.com/in/trung-nh%C3%A2n-b8bb271a5',
+    link: 'https://www.linkedin.com/in/hotrungnhan',
   },
   {
     icon: (
@@ -61,7 +61,7 @@ const social = [
       />
     ),
     text: 'Youtube',
-    link: 'https://fb.com/kudou.d.sterain',
+    link: 'https://yt.com/@mr.nh_n',
   },
 ]
 function SocialComponent() {
