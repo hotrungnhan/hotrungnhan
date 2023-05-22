@@ -3,11 +3,10 @@ name: App CI
 on:
   push:
     branches:
-      - "v2/biopage"
+      - 'v2/biopage'
     paths-ignore:
-      - "*.md"
-env:
-  GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      - '*.md'
+  workflow_dispatch:
 
 jobs:
   # Build & Test
@@ -15,14 +14,12 @@ jobs:
     name: Build & Test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        with:
-          token: ${{ env.GITHUB_TOKEN }}
+      - uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
-          node-version: "16"
-          cache: "yarn"
+          node-version: '18'
+          cache: 'yarn'
       - name: INSTALL
         run: yarn
       # Build
@@ -30,7 +27,7 @@ jobs:
         run: yarn build
 
       # Upload dist artifacts
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: dist
           path: dist/
@@ -39,20 +36,15 @@ jobs:
     if: github.ref == 'refs/heads/v2/biopage'
     needs: buildAndTest
     runs-on: ubuntu-latest
-    # environment:
-    # name: pchmn.github.io/vite-react-ts-ghactions-template
-    # url: https://pchmn.github.io/vite-react-ts-ghactions-template/
     steps:
-      - uses: actions/checkout@v2
-        with:
-          token: ${{ env.GITHUB_TOKEN }}
+      - uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: '18'
 
       # Download dist artifacts
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v3
         with:
           name: dist
           path: dist/
@@ -61,8 +53,8 @@ jobs:
       - name: DEPLOY
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ env.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          user_name: ${{ secrets.GIT_AUTHOR_NAME }}
-          user_email: ${{ secrets.GIT_AUTHOR_EMAIL }}
-          cname: ${{ secrets.CNAME }}
+          user_name: ${{ env.GIT_AUTHOR_NAME }}
+          user_email: ${{ env.GIT_AUTHOR_EMAIL }}
+          cname: ${{ env.CNAME }}
