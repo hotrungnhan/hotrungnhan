@@ -32,11 +32,13 @@ function PdfComponent() {
     <Document
       file="CV.pdf"
       onLoadSuccess={onDocumentLoadSuccess}
-      className="relative flex flex-col gap-4"
+      className="xs:mx-0 relative flex max-w-[100%] flex-col gap-2 md:-mx-0 md:gap-4"
     >
-      <div className="md:flex md:flex-row md:gap-4">
-        <Page pageNumber={1} height={150} />
-        <Page pageNumber={2} height={150} className="hidden md:block" />
+      <div className="flex w-full">
+        <div className="flex flex-row overflow-x-auto md:gap-4">
+          <Page pageNumber={1} height={300} />
+          <Page pageNumber={2} height={300} />
+        </div>
       </div>
       <a
         className="mx-auto inline-block rounded border-2 border-blue-600 px-6 py-2 text-xs font-medium uppercase leading-tight text-blue-600 transition duration-150 ease-in-out hover:bg-black/5 focus:outline-none focus:ring-0 dark:border-blue-300 dark:bg-gray-50  dark:hover:bg-white/75"

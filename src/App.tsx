@@ -38,7 +38,7 @@ function App() {
           hidden: !isScroll,
         })}
       ></nav>
-      <main className="container m-auto mt-8 flex w-full flex-col gap-8 p-8 ">
+      <main className="container m-auto mt-8 flex w-full flex-col gap-8 ">
         {/* introduction */}
         {/* eslint-disable-next-line tailwindcss/no-custom-classname */}
         <section className="m-auto flex flex-col gap-8">
