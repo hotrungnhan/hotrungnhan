@@ -135,11 +135,11 @@ function RoadmapComponent() {
           )
         })}
       </Stepper>
-      <div className="hidden sm:col-span-3 lg:block ">
+      <div className="hidden sm:col-span-3 lg:my-auto lg:block">
         <AnimatePresence>
           {steps[activeStep] && steps[activeStep].content && (
             <motion.div
-              className=" w-full sm:mt-0 md:my-auto "
+              className=" w-full sm:mt-0 "
               key={activeStep}
               initial={{ opacity: 0, transitionDelay: '4000', x: '50%' }}
               animate={{ opacity: 1, x: '0', animationDuration: '2s' }}
