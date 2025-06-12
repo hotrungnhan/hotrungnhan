@@ -1,10 +1,10 @@
 ### Hi there, I’m [Hồ Trung Nhân!](https://nhan.tk) 👋
 
 <a href="https://fb.com/kudou.d.sterain">
-  <img alt="Nhan's Facebook" height="30px" width="30px" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assest/facebook.gif?raw=true" />
+  <img alt="Nhan's Facebook" height="30px" width="30px" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assets/facebook.gif?raw=true" />
 </a>
 <a href="https://zalo.me/0961130643">
-  <img alt="Nhan's Zalo" height="30px" width="30px" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assest/zalo_cssani.svg?raw=true" />
+  <img alt="Nhan's Zalo" height="30px" width="30px" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assets/zalo_cssani.svg?raw=true" />
 </a>
 
 ---
@@ -31,16 +31,16 @@ I'm a passionate self-taught backend developer from **Vietnam**, constantly lear
 🛠 **Languages & Tools**
 
 <div>
-  <img alt="Golang" src="https://raw.githubusercontent.com/hotrungnhan/hotrungnhan/c0d828254e3c3170f72380df4dc8403e0bec446f/assest/golang.svg" width="30" />
-  <img alt="JavaScript" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assest/javascript.gif?raw=true" width="30" />
-  <img alt="Typescript" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assest/typescript.svg?raw=true" width="30" />
-  <img alt="Ruby" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assest/ruby.svg?raw=true" width="30" />
-  <img alt="ReactJS" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assest/react.svg?raw=true" width="30" />
-  <img alt="Docker" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assest/docker.svg?raw=true" width="30" />
-  <img alt="Kubenetes" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assest/k8s.svg?raw=true" width="30" />
-  <img alt="PostgreSQL" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assest/postgresql.svg?raw=true" width="30" />
-  <img alt="MongoDB" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assest/mongodb.svg?raw=true" width="30" />
-  <img alt="Firebase" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assest/firebase.svg?raw=true" width="30" />
+  <img alt="Golang" src="https://raw.githubusercontent.com/hotrungnhan/hotrungnhan/c0d828254e3c3170f72380df4dc8403e0bec446f/assets/golang.svg" width="30" />
+  <img alt="JavaScript" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assets/javascript.gif?raw=true" width="30" />
+  <img alt="Typescript" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assets/typescript.svg?raw=true" width="30" />
+  <img alt="Ruby" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assets/ruby.svg?raw=true" width="30" />
+  <img alt="ReactJS" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assets/react.gif?raw=true" width="30" />
+  <img alt="Docker" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assets/docker.svg?raw=true" width="30" />
+  <img alt="Kubenetes" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assets/k8s.svg?raw=true" width="30" />
+  <img alt="PostgreSQL" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assets/postgresql.svg?raw=true" width="30" />
+  <img alt="MongoDB" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assets/mongodb.svg?raw=true" width="30" />
+  <img alt="Firebase" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assets/firebase.svg?raw=true" width="30" />
 </div>
 
 ---
