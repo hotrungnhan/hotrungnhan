@@ -13,7 +13,7 @@
 
 I'm a passionate self-taught backend developer from **Vietnam**, constantly learning and building in the world of code.
 
-- 🌱 Currently working as a **C# backend developer**
+- 🌱 Currently working as a **Go and Ruby backend developer**
 - 🧠 Always exploring new tools and backend frameworks
 - 💬 Ask me anything [here](https://github.com/hotrungnhan/hotrungnhan/issues)
 
