@@ -1,47 +1,43 @@
-### Hi there, I’m [Hồ Trung Nhân!](https://nhan.tk) 👋
+### 👋 Hi there, I’m [Hồ Trung Nhân](https://nhan.tk)
 
-<a href="https://fb.com/kudou.d.sterain">
-  <img alt="Nhan's Facebook" height="30px" width="30px" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assets/facebook.gif?raw=true" />
-</a>
-<a href="https://zalo.me/0961130643">
-  <img alt="Nhan's Zalo" height="30px" width="30px" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assets/zalo_cssani.svg?raw=true" />
-</a>
+Backend engineer from **Vietnam 🇻🇳**, self-taught, curious, and always building.
+
+I’m a **Go & Ruby backend developer** who enjoys learning new technologies, contributing to open-source, and designing scalable systems.
 
 ---
 
-🎯 **About Me**
+### 🌍 Open-Source Contributions
 
-I'm a passionate self-taught backend developer from **Vietnam**, constantly learning and building in the world of code.
+Contributor to several open-source projects, including:
 
-- 🌱 Currently working as a **Go and Ruby backend developer**
-- 🧠 Always exploring new tools and backend frameworks
-- 💬 Ask me anything [here](https://github.com/hotrungnhan/hotrungnhan/issues)
-
----
-
-🎉 **Interests**
-
-- 🎸 Playing instruments  
-- 🎮 Gaming & eSports  
-- 🖥️ Tech tinkering  
-- 🍲 Food lover  
+* **Go Fiber** – A fast, expressive Go REST API framework
+* **Homarr** – A customizable self-hosted dashboard
+* **omniauth-google-id-token** – A Ruby library for Google OAuth2 authentication in OmniAuth
+* …and many other community projects
 
 ---
 
-🛠 **Languages & Tools**
+### 🎯 About Me
 
-<div>
-  <img alt="Golang" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assets/golang.svg?raw=true" width="30" />
-  <img alt="JavaScript" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assets/javascript.gif?raw=true" width="30" />
-  <img alt="Typescript" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assets/typescript.svg?raw=true" width="30" />
-  <img alt="Ruby" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assets/ruby.svg?raw=true" width="30" />
-  <img alt="ReactJS" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assets/react.svg?raw=true" width="30" />
-  <img alt="Docker" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assets/docker.svg?raw=true" width="30" />
-  <img alt="Kubenetes" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assets/k8s.svg?raw=true" width="30" />
-  <img alt="PostgreSQL" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assets/postgresql.svg?raw=true" width="30" />
-  <img alt="MongoDB" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assets/mongodb.svg?raw=true" width="30" />
-  <img alt="Firebase" src="https://github.com/hotrungnhan/hotrungnhan/blob/main/assets/firebase.svg?raw=true" width="30" />
-</div>
+* 💼 Currently working with **Go** and **Ruby** on backend systems
+* 🌱 Constantly learning new tools, architectures, and frameworks
+* 💬 Feel free to ask me anything [here](https://github.com/hotrungnhan/hotrungnhan/issues)
+
+---
+
+### 🎉 Interests
+
+* 🎸 Playing musical instruments
+* 🎮 Gaming & eSports
+* 🖥️ Tech tinkering
+* 🍲 Exploring good food
+
+---
+
+### 🛠 Languages & Tools
+
+Go · Ruby · JavaScript · TypeScript · React
+Docker · Kubernetes · PostgreSQL · MongoDB · Firebase
 
 ---
 
