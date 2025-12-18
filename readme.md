@@ -2,7 +2,7 @@
 
 Backend engineer from **Vietnam 🇻🇳**, self-taught, curious, and always building.
 
-I’m a **NodeJS & Go & Ruby backend developer** who enjoys learning new technologies, contributing to open-source, and designing scalable systems.
+I’m a **Typescript & Go & Ruby backend developer** who enjoys learning new technologies, contributing to open-source, and designing scalable systems.
 
 ---
 
