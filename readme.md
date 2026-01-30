@@ -12,7 +12,7 @@ Contributor to several open-source projects, including:
 
 * **Go Fiber** – A fast, expressive Go REST API framework
 * **Homarr** – A customizable self-hosted dashboard
-* **omniauth-google-id-token** – A Ruby library for Google OAuth2 authentication in OmniAuth
+* **omniauth-google-id-token** – A Ruby library for Google OAuth2 authentication in OmniAuth - A fork to fix all existing issue.
 * …and many other community projects
 
 ---
